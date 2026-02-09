@@ -1,0 +1,1 @@
+Our task is to predict based on the dataset which customers are more likely to purchase a car based on a campaign  
