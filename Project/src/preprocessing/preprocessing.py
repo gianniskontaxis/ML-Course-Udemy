@@ -33,7 +33,7 @@ from sklearn.preprocessing import OneHotEncoder
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [0])]  , remainder='passthrough')#we wrote passthrogh because we want to keep the columns that wont be applied one hot encoding 
 X = np.array(ct. fit_transform(X))
 
-print(X)
+print("The encoded dataset is this:\n", X)
 
 #Encoding the the Dependent Variable
 from sklearn.preprocessing import LabelEncoder
