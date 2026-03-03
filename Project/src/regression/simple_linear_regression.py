@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 
 #Import the dataset
-df = pd.read_csv('../data/raw/Salary_Data.csv')
+df = pd.read_csv('../../data/raw/Salary_Data.csv')
 X = df.iloc[:, :-1].values
 y = df.iloc[:, -1].values
 

@@ -2,11 +2,10 @@ import pandas as pd
 
 
 #Load Dataset
-dataset = pd.read_csv("../data/raw/50_Startups.csv")
+dataset = pd.read_csv("../../data/raw/50_Startups.csv")
 
 print("Dataset Shape:", dataset.shape)
 print("\nColumn Data Types:\n", dataset.dtypes)
-
 
 #Detect Categorical Features
 categorical_cols = dataset.select_dtypes(include=['object', 'category']).columns
@@ -21,6 +20,13 @@ print("\nCardinality of Categorical Features:")
 for col in categorical_cols:
     unique_count = dataset[col].nunique()
     print(f"{col}: {unique_count} unique categories")
+
+
+# Print Actual Unique Values of Categorical Features
+print("\nUnique Values in Categorical Features:")
+for col in categorical_cols:
+    unique_values = dataset[col].unique()
+    print(f"{col} ({dataset[col].nunique()} unique): {unique_values}")
 
 
 #Detect Possible Mis-Typed Categorical (Numeric but Low Unique Values)
